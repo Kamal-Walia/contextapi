@@ -2,7 +2,11 @@ import React from "react";
 import MyContext from "./context/Context";
 
 class ContextConsumer extends React.Component{
+    static contextType = MyContext;
 
+    componentDidUpdate() {
+        console.log('KW102', this.context)
+    }
     render() {
         return(
             <MyContext.Consumer>
